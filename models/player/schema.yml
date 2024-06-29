@@ -1,0 +1,185 @@
+version: 2
+
+models:
+  - name: player
+    description: "Player base information"
+    columns:
+      - name: id
+        description: "Primary key for the player"
+      - name: resourceId
+        description: "Resource ID"
+      - name: resourceBaseId
+        description: "Resource base ID"
+      # Add descriptions for other columns as needed
+
+  - name: play_style
+    description: "Player play styles"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: playStyle
+        description: "Play style"
+
+  - name: play_style_plus
+    description: "Player play style plus"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: playStylePlus
+        description: "Play style plus"
+
+  - name: position_alternative
+    description: "Player alternative positions"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: positionAlternative
+        description: "Alternative position"
+
+  - name: pace_attributes
+    description: "Player pace attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: acceleration
+        description: "Acceleration attribute"
+      - name: sprintSpeed
+        description: "Sprint speed attribute"
+
+  - name: shooting_attributes
+    description: "Player shooting attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: positioning
+        description: "Positioning attribute"
+      - name: finishing
+        description: "Finishing attribute"
+      - name: shotPower
+        description: "Shot power attribute"
+      - name: longShots
+        description: "Long shots attribute"
+      - name: volleys
+        description: "Volleys attribute"
+      - name: penalties
+        description: "Penalties attribute"
+
+  - name: passing_attributes
+    description: "Player passing attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: vision
+        description: "Vision attribute"
+      - name: crossing
+        description: "Crossing attribute"
+      - name: freeKickAccuracy
+        description: "Free kick accuracy attribute"
+      - name: shortPassing
+        description: "Short passing attribute"
+      - name: longPassing
+        description: "Long passing attribute"
+      - name: curve
+        description: "Curve attribute"
+
+  - name: dribbling_attributes
+    description: "Player dribbling attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: agility
+        description: "Agility attribute"
+      - name: balance
+        description: "Balance attribute"
+      - name: reactions
+        description: "Reactions attribute"
+      - name: ballControl
+        description: "Ball control attribute"
+      - name: dribbling
+        description: "Dribbling attribute"
+      - name: composure
+        description: "Composure attribute"
+
+  - name: defending_attributes
+    description: "Player defending attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: interceptions
+        description: "Interceptions attribute"
+      - name: headingAccuracy
+        description: "Heading accuracy attribute"
+      - name: standingTackle
+        description: "Standing tackle attribute"
+      - name: slidingTackle
+        description: "Sliding tackle attribute"
+      - name: defenseAwareness
+        description: "Defense awareness attribute"
+
+  - name: physicality_attributes
+    description: "Player physicality attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: jumping
+        description: "Jumping attribute"
+      - name: stamina
+        description: "Stamina attribute"
+      - name: strength
+        description: "Strength attribute"
+      - name: aggression
+        description: "Aggression attribute"
+
+  - name: goalkeeper_attributes
+    description: "Player goalkeeper attributes"
+    columns:
+      - name: playerId
+        description: "Foreign key to Player table"
+      - name: diving
+        description: "Diving attribute"
+      - name: handling
+        description: "Handling attribute"
+      - name: kicking
+        description: "Kicking attribute"
+      - name: positioning
+        description: "Positioning attribute"
+      - name: reflexes
+        description: "Reflexes attribute"
+
+  - name: rarities
+    description: "Rarities information"
+    columns:
+      - name: id
+        description: "Primary key for rarity"
+      - name: name
+        description: "Name of the rarity"
+
+  - name: nations
+    description: "nations information"
+    columns:
+      - name: id
+        description: "Primary key for nation"
+      - name: name
+        description: "Name of the nation"
+
+  - name: leagues
+    description: "Leagues information"
+    columns:
+      - name: id
+        description: "Primary key for league"
+      - name: name
+        description: "Name of the league"
+      - name: nationId
+        description: "ID of the associated nation"
+      - name: gender
+        description: "Gender associated with the league"
+
+  - name: clubs
+    description: "Clubs information"
+    columns:
+      - name: id
+        description: "Primary key for club"
+      - name: name
+        description: "Name of the club"
+      - name: league
+        description: "ID of the associated league"
